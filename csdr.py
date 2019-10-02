@@ -212,7 +212,7 @@ class dsp:
 
     def get_secondary_fft_bytes_to_read(self):
         if self.fft_compression=="none": return self.secondary_fft_size*4
-        if self.fft_compression=="adpcm": return (self.secondary_fft_size/2)+(10/2)
+        if self.fft_compression=="adpcm": return int((self.secondary_fft_size/2)+(10/2))
 
     def set_samp_rate(self,samp_rate):
         #to change this, restart is required
